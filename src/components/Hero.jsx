@@ -1,10 +1,12 @@
+import rivellahero from "../assets/images/rivellahero.jpg"
+
 export default function Hero() {
   return (
     <section className="relative w-full min-h-screen pt-8">
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-black/60 z-10" />
         <img
-          src="/src/assets/images/rivellahero.jpg"
+          src={rivellahero}
           alt="Hero Background"
           className="w-full h-full object-cover object-center"
         />
