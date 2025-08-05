@@ -23,9 +23,26 @@ export default function Hero() {
           Rivella
         </h1>
 
-        <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold text-white mt-1">
-          Enterprise
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl text-[#f3b925] mt-1 font-mono">
+          ENTERPRISE
         </h2>
+
+        <h3 className="text-white text-2xl float-animation">
+          Your reference point for <span className="font-extrabold">
+            healthy living
+          </span>. We deliver the finest
+          quality, nutrient-rich <br /> beverages and artisanal snacks crafted with
+          <span className="text-[#f3b925]"> locally sourced ingredients</span>.
+        </h3>
+
+
+
+        <button className="text-white border border-white rounded-2xl w-40 h-10 font-bold 
+  transition-all duration-300 ease-in-out 
+  hover:bg-white hover:text-black hover:scale-105 hover:shadow-lg">
+          Get In Touch
+        </button>
+
       </div>
     </section>
   );

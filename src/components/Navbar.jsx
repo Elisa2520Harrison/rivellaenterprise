@@ -7,18 +7,12 @@ export default function Navbar() {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 50) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
-            }
+            setScrolled(window.scrollY > 50);
         };
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
-
-
 
     return (
         <nav
@@ -26,35 +20,70 @@ export default function Navbar() {
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+                {/* Logo */}
                 <div className="flex items-center">
-                    <img
-                        src={rivellalogo}
-                        alt="Rivella Logo"
-                        className="h-10 w-auto"
-                    />
+                    <img src={rivellalogo} alt="Rivella Logo" className="h-10 w-auto" />
                 </div>
 
+                {/* Hamburger / Close Button */}
                 <div className="md:hidden">
-                    <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
-                        <div className="space-y-1">
-                            <span className="block w-6 h-0.5 bg-black"></span>
-                            <span className="block w-6 h-0.5 bg-black"></span>
-                            <span className="block w-6 h-0.5 bg-black"></span>
-                        </div>
+                    <button
+                        onClick={() => setIsOpen(!isOpen)}
+                        className="focus:outline-none transition-all duration-300"
+                    >
+                        {isOpen ? (
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-6 w-6 transition-all duration-300"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="white"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M6 18L18 6M6 6l12 12"
+                                />
+                            </svg>
+                        ) : (
+                            <div className="space-y-1 transition-all duration-300">
+                                <span className={`block w-6 h-0.5 ${scrolled ? "bg-black" : "bg-white"}`}></span>
+                                <span className={`block w-6 h-0.5 ${scrolled ? "bg-black" : "bg-white"}`}></span>
+                                <span className={`block w-6 h-0.5 ${scrolled ? "bg-black" : "bg-white"}`}></span>
+                            </div>
+                        )}
+
                     </button>
                 </div>
 
-                <div
-                    className={`flex-col md:flex-row md:flex md:space-x-6 absolute md:static left-0 top-full w-full md:w-auto bg-white md:bg-transparent text-black transition-all duration-300 ease-in-out ${isOpen ? "flex" : "hidden"
-                        }`}
-                >
-                    <a href="#" className="block text-center py-2 md:py-0 hover:text-amber-600">Home</a>
-                    <a href="#" className="block text-center py-2 md:py-0 hover:text-purple-600">About</a>
-                    <a href="#" className="block text-center py-2 md:py-0 hover:text-purple-600">Products</a>
-                    <a href="#" className="block text-center py-2 md:py-0 hover:text-purple-600">Services</a>
-                    <a href="#" className="block text-center py-2 md:py-0 hover:text-purple-600">Contact</a>
+                <div className="hidden md:flex space-x-6 items-center">
+                    {["Home", "About", "Products", "Services", "Contact"].map((item) => (
+                        <a
+                            key={item}
+                            href="#"
+                            className={`font-medium transition hover:text-purple-600 ${scrolled ? "text-black" : "text-white"
+                                }`}
+                        >
+                            {item}
+                        </a>
+                    ))}
                 </div>
             </div>
+
+            {isOpen && (
+                <div className="md:hidden bg-white shadow-md px-6 py-4 space-y-4 transition-all duration-300">
+                    {["Home", "About", "Products", "Services", "Contact"].map((item) => (
+                        <a
+                            key={item}
+                            href="#"
+                            className="block text-black font-semibold hover:text-purple-600"
+                        >
+                            {item}
+                        </a>
+                    ))}
+                </div>
+            )}
         </nav>
     );
 }
