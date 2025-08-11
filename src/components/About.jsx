@@ -49,7 +49,7 @@ export default function About() {
         </h2>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <strong>Small Batch Production:</strong> Ensures every drink is
+            <strong>Small Batch Production:</strong> Ensures every beverage and snack is
             fresh and flavourful.
           </li>
           <li>

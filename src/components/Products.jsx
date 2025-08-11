@@ -1,102 +1,86 @@
-import DrinksImage from "../assets/images/drinks.png";
-import SnacksImage from "../assets/images/snacks.png";
-import OthersImage from "../assets/images/others.png";
-
+import DzoeweImage from "../assets/images/dzoewe.jpg";
 import BisapImage from "../assets/images/bisap.png";
 import TamarindImage from "../assets/images/tamarind.png";
+import AsanaImage from "../assets/images/asana.png";
+import CoconutCocktailImage from "../assets/images/coconutcocktail.png";
+import MilletDrinkImage from "../assets/images/milletdrink.png";
+import FruitJuicesImage from "../assets/images/fruitjuices.png";
+import AgbeliKakloImage from "../assets/images/agbelikaklo.png";
+import ChinChinImage from "../assets/images/chinchin.jpg";
+import PlantainChipsImage from "../assets/images/plantainchips.png";
+import BoiledEggImage from "../assets/images/boiledegg.png";
+import GizzardImage from "../assets/images/gizzard.png";
+import GrilledChickenImage from "../assets/images/grilledchicken.png";
+import PepperedWeleImage from "../assets/images/pepperedwele.png";
 
-// import AgoniImage from "../assets/images/products/agoni.jpg";
-// import KakoroImage from "../assets/images/products/kakoro.jpg";
-// import ChinChinImage from "../assets/images/products/chinchin.jpg";
-// import PlantainChipsImage from "../assets/images/products/plantain_chips.jpg";
-// import ZipBellyImage from "../assets/images/products/zip_belly.jpg";
-// import JewelryImage from "../assets/images/products/jewelry.jpg";
-
-// import BoiledEggPepperImage from "../assets/images/products/boiled_egg_pepper.jpg";
-// import GizzardBucketImage from "../assets/images/products/gizzard_bucket.jpg";
-// import KebabImage from "../assets/images/products/kebab.jpg";
-// import GrilledChickenImage from "../assets/images/products/grilled_chicken.jpg";
-// import PepperedDurianImage from "../assets/images/products/peppered_durian.jpg";
-
-export default function Products () {
+export default function Products() {
   const productCategories = [
     {
-      title: "Drinks & Juices",
-      image: DrinksImage,
+      title: "Refreshing Drinks",
       products: [
         { name: "Bisap Drink", image: BisapImage },
         { name: "Tamarind Drink", image: TamarindImage },
-        // { name: "Coconut Cocktail", image: CoconutCocktailImage },
-        // { name: "Fruit Juices", image: FruitJuicesImage },
+        { name: "Coconut Cocktail", image: CoconutCocktailImage },
+        { name: "Millet Drink", image: MilletDrinkImage },
+        { name: "Fruit Juices", image: FruitJuicesImage },
+        { name: "Asana", image: AsanaImage },
       ],
     },
-    // {
-    //   title: "Snacks",
-    //   image: SnacksImage,
-    //   products: [
-    //     { name: "Cocoa Rings", image: CocoaRingsImage },
-    //     { name: "Achi Fifi", image: AchiFifiImage },
-    //     { name: "Agoni", image: AgoniImage },
-    //     { name: "Kakoro", image: KakoroImage },
-    //     { name: "Chin Chin", image: ChinChinImage },
-    //     { name: "Plantain Chips", image: PlantainChipsImage },
-    //     { name: "Zip Belly", image: ZipBellyImage },
-    //     { name: "Jewelry", image: JewelryImage },
-    //   ],
-    // },
-    // {
-    //   title: "Others",
-    //   image: OthersImage,
-    //   products: [
-    //     { name: "Boiled Egg + Pepper", image: BoiledEggPepperImage },
-    //     { name: "Gizzard in Bucket", image: GizzardBucketImage },
-    //     { name: "Kebab", image: KebabImage },
-    //     { name: "Grilled Chicken Pieces", image: GrilledChickenImage },
-    //     { name: "Peppered Durian", image: PepperedDurianImage },
-    //   ],
-    // },
+    {
+      title: "Delicious Snacks",
+      products: [
+        { name: "Agbeli Kaklo", image: AgbeliKakloImage },
+        { name: "Chin Chin", image: ChinChinImage },
+        { name: "Plantain Chips", image: PlantainChipsImage },
+        { name: "Dzoewe", image: DzoeweImage },
+      ],
+    },
+    {
+      title: "Finger Foods",
+      products: [
+        { name: "Boiled Egg + Pepper", image: BoiledEggImage },
+        { name: "Gizzard (Khebab)", image: GizzardImage },
+        { name: "Grilled Chicken Pieces", image: GrilledChickenImage },
+        { name: "Peppered Wele", image: PepperedWeleImage },
+      ],
+    },
   ];
 
   return (
-    <section className="px-6 md:px-16 py-12 max-w-7xl mx-auto">
-      <h2 className="text-3xl font-extrabold text-center text-[#2f7e40] mb-10">
+    <section className="px-4 sm:px-6 md:px-16 py-12 max-w-7xl mx-auto">
+      <h2 className="text-2xl sm:text-3xl font-extrabold text-center text-[#2f7e40] mb-8 sm:mb-12">
         Our Products
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="space-y-16">
         {productCategories.map((category, index) => (
-          <div
-            key={index}
-            className="rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow p-5 flex flex-col"
-          >
-            <img
-              src={category.image}
-              alt={category.title}
-              className="w-full h-48 object-cover rounded-md mb-5"
-            />
-            <h3 className="text-xl font-semibold text-[#2f7e40] mb-4">
+          <div key={index} className="space-y-8">
+            <h3 className="text-xl sm:text-2xl font-bold text-[#2f7e40] border-b-2 border-[#8B297F] pb-2">
               {category.title}
             </h3>
-            <ul className="flex flex-col gap-3 overflow-auto max-h-60">
-              {category.products.map((product, i) => (
-                <li key={i} className="flex items-center gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+              {category.products.map((product, idx) => (
+                <div
+                  key={idx}
+                  className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow p-3 sm:p-4 flex flex-col"
+                >
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-12 h-12 object-cover rounded-md flex-shrink-0"
-                    loading="lazy"
+                    className="w-full h-32 sm:h-40 object-cover rounded-md mb-3 sm:mb-4"
                   />
-                  <span className="text-gray-700 text-base">{product.name}</span>
-                </li>
+                  <h4 className="text-sm sm:text-base font-semibold text-[#2f7e40] mb-1 sm:mb-2">
+                    {product.name}
+                  </h4>
+                  <button className="mt-auto bg-[#8B297F] text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-[#722067] transition-colors text-xs sm:text-sm">
+                    Enquire Now
+                  </button>
+                </div>
               ))}
-            </ul>
-            <button className="mt-6 bg-[#8B297F] text-white px-5 py-2 rounded-full hover:bg-[#722067] transition-colors self-start">
-              Enquire Now
-            </button>
+            </div>
           </div>
         ))}
       </div>
     </section>
   );
 }
-

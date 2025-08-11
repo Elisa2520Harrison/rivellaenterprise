@@ -1,4 +1,8 @@
-import rivellahero from "../assets/images/rivellahero.jpg"
+// import rivellahero from "../assets/images/rivellahero.jpg"
+// import HeroImg from "../assets/images/heroimg.png"
+import healthybg from "../assets/images/healthybg.png"
+
+
 
 export default function Hero() {
   return (
@@ -6,7 +10,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-black/60 z-10" />
         <img
-          src={rivellahero}
+          src={healthybg}
           alt="Hero Background"
           className="w-full h-full object-cover object-center"
         />
