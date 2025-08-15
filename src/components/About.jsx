@@ -23,7 +23,6 @@ export default function About() {
         </div>
       </div>
 
-      {/* Rest of the content remains exactly the same */}
       <div className="mb-10">
         <h2 className="text-2xl font-bold text-[#308e51] mb-2">Who We Are</h2>
         <p>

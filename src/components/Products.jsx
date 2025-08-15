@@ -47,14 +47,16 @@ export default function Products() {
   ];
 
   return (
-    <section id="products" className="px-4 sm:px-6 md:px-16 py-12 max-w-7xl mx-auto bg-purple-100">
+    <section
+      id="products"
+      className="px-4 sm:px-6 md:px-16 py-12 max-w-7xl mx-auto bg-purple-100"
+    >
       <div className="text-center mb-8 sm:mb-12">
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-[#8B297F] mb-2 sm:mb-4">
           Our <span className="text-[#2F7739]">Products</span>
         </h2>
         <div className="w-20 h-1 bg-gradient-to-r from-[#8B297F] to-[#2F7739] mx-auto rounded-full"></div>
       </div>
-
 
       <div className="space-y-16">
         {productCategories.map((category, index) => (
@@ -71,6 +73,10 @@ export default function Products() {
                   <img
                     src={product.image}
                     alt={product.name}
+                    loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="300"
                     className="w-full h-32 sm:h-40 object-cover rounded-md mb-3 sm:mb-4"
                   />
                   <h4 className="text-sm sm:text-base font-semibold text-[#2f7e40] mb-1 sm:mb-2">

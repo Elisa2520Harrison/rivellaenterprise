@@ -26,6 +26,7 @@ export default function PastEvents() {
 
   return (
     <section className="bg-emerald-100 px-4 sm:px-6 py-12 md:py-20">
+      {/* Heading */}
       <div className="max-w-6xl mx-auto text-center mb-12">
         <h2 className="text-4xl sm:text-5xl font-extrabold text-[#8B297F] mb-4">
           Past <span className="text-[#2F7739]">Events</span>
@@ -48,12 +49,16 @@ export default function PastEvents() {
             <div className="relative h-44 sm:h-52 w-full overflow-hidden">
               <img
                 src={event.image}
+                srcSet={`${event.image} 400w, ${event.image} 800w`}
+                sizes="(max-width: 768px) 400px, 800px"
                 alt={event.title}
+                width="400"
+                height="300"
+                loading="lazy"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
 
-            {/* Text */}
             <div className="p-4 sm:p-5 flex flex-col flex-grow">
               <h3 className="text-lg sm:text-xl font-bold text-[#2F7739] mb-2">
                 {event.title}
