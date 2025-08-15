@@ -1,7 +1,7 @@
-import DzoeweImage from "../assets/images/dzoewe.jpg";
+import DzowoeImage from "../assets/images/dzowoe.jpg";
 import BisapImage from "../assets/images/bisap.png";
 import TamarindImage from "../assets/images/tamarind.png";
-import AsanaImage from "../assets/images/asana.png";
+import AlihaImage from "../assets/images/aliha.png";
 import CoconutCocktailImage from "../assets/images/coconutcocktail.png";
 import MilletDrinkImage from "../assets/images/milletdrink.png";
 import FruitJuicesImage from "../assets/images/fruitjuices.png";
@@ -23,7 +23,7 @@ export default function Products() {
         { name: "Coconut Cocktail", image: CoconutCocktailImage },
         { name: "Millet Drink", image: MilletDrinkImage },
         { name: "Fruit Juices", image: FruitJuicesImage },
-        { name: "Asana", image: AsanaImage },
+        { name: "Aliha (Asana)", image: AlihaImage },
       ],
     },
     {
@@ -32,7 +32,7 @@ export default function Products() {
         { name: "Agbeli Kaklo", image: AgbeliKakloImage },
         { name: "Chin Chin", image: ChinChinImage },
         { name: "Plantain Chips", image: PlantainChipsImage },
-        { name: "Dzoewe", image: DzoeweImage },
+        { name: "Dzowoe", image: DzowoeImage },
       ],
     },
     {
@@ -47,10 +47,14 @@ export default function Products() {
   ];
 
   return (
-    <section className="px-4 sm:px-6 md:px-16 py-12 max-w-7xl mx-auto">
-      <h2 className="text-2xl sm:text-3xl font-extrabold text-center text-[#2f7e40] mb-8 sm:mb-12">
-        Our Products
-      </h2>
+    <section id="products" className="px-4 sm:px-6 md:px-16 py-12 max-w-7xl mx-auto bg-purple-100">
+      <div className="text-center mb-8 sm:mb-12">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-[#8B297F] mb-2 sm:mb-4">
+          Our <span className="text-[#2F7739]">Products</span>
+        </h2>
+        <div className="w-20 h-1 bg-gradient-to-r from-[#8B297F] to-[#2F7739] mx-auto rounded-full"></div>
+      </div>
+
 
       <div className="space-y-16">
         {productCategories.map((category, index) => (

@@ -1,4 +1,4 @@
-import Card, { CardContent } from "../components/Card"; 
+import Card, { CardContent } from "../components/Card";
 import { TrendingUp, Users, Award, Heart } from "lucide-react";
 
 export default function StatsSection() {
@@ -34,18 +34,17 @@ export default function StatsSection() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
-      {/* Background decorative circles */}
+    <section className="py-20 bg-emerald-100 relative overflow-hidden">
       <div className="absolute top-10 right-10 w-64 h-64 bg-rivella-green/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-10 left-10 w-64 h-64 bg-purple-950/5 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Title */}
-        <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-black text-[#8B297F] mb-6">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-[#8B297F] mb-2 sm:mb-4">
             Our <span className="text-[#2F7739]">Impact</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-[#8B297F] to-[#2F7739] mx-auto rounded-full"></div>
         </div>
 
         {/* Stats Grid */}

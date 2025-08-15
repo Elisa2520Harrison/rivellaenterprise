@@ -6,7 +6,7 @@ import healthybg from "../assets/images/healthybg.png"
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-screen pt-8">
+    <section id="home" className="relative w-full min-h-screen pt-8">
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-black/60 z-10" />
         <img

@@ -41,3 +41,8 @@
 .glow-animation {
   animation: pulseGlow 2s ease-in-out infinite;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+

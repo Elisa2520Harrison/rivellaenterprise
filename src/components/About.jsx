@@ -2,7 +2,7 @@ import { Star } from "lucide-react";
 
 export default function About() {
   return (
-    <section className="px-6 md:px-16 py-10 max-w-7xl mx-auto text-gray-800">
+    <section id="about" className="px-6 md:px-16 py-10 max-w-7xl mx-auto text-gray-800">
       {/* Since 2018 Badge */}
       <div className="text-center">
         <div
@@ -14,12 +14,16 @@ export default function About() {
           <Star className="w-4 h-4 text-[#8B297F]" />
         </div>
 
-        <h1 className="text-4xl font-extrabold text-center text-[#2f7e40] mb-10">
-          About Rivella Enterprise
-        </h1>
+        {/* Main Title with Underline */}
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-[#8B297F] mb-2 sm:mb-4">
+            About <span className="text-[#2F7739]">Rivella</span>
+          </h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-[#8B297F] to-[#2F7739] mx-auto rounded-full mb-4 sm:mb-6"></div>
+        </div>
       </div>
 
-      {/* Who We Are */}
+      {/* Rest of the content remains exactly the same */}
       <div className="mb-10">
         <h2 className="text-2xl font-bold text-[#308e51] mb-2">Who We Are</h2>
         <p>
@@ -73,7 +77,7 @@ export default function About() {
           Sustainability Commitment
         </h2>
         <p>
-          We’re committed to protecting our environment. In 2024, we replaced
+          We're committed to protecting our environment. In 2024, we replaced
           plastic with paper packaging and switched from firewood to LPG —
           supporting:
         </p>
@@ -120,8 +124,6 @@ export default function About() {
             </p>
           </div>
         </div>
-
-
       </div>
     </section>
   );
