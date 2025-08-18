@@ -1,4 +1,4 @@
-import RivwedImg from "../assets/images/rivwed.png";
+import LuxuryImg from "../assets/images/luxurywed.png";
 import GeishaSummitImg from "../assets/images/geishawomen.png";
 import ExpoImg from "../assets/images/expo.png";
 
@@ -8,7 +8,7 @@ export default function PastEvents() {
       title: "Luxury Wedding Reception",
       description:
         "Crafted custom drinks and delightful snacks for a glamorous wedding celebration that guests will remember forever.",
-      image: RivwedImg,
+      image: LuxuryImg,
     },
     {
       title: "Geisha National Women’s Summit",

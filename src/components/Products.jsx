@@ -49,7 +49,7 @@ export default function Products() {
   return (
     <section
       id="products"
-      className="px-4 sm:px-6 md:px-16 py-12 max-w-7xl mx-auto bg-purple-100"
+      className="px-4 sm:px-6 md:px-16 py-12 max-w-7xl mx-auto"
     >
       <div className="text-center mb-8 sm:mb-12">
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-[#8B297F] mb-2 sm:mb-4">
