@@ -82,9 +82,13 @@ export default function Products() {
                   <h4 className="text-sm sm:text-base font-semibold text-[#2f7e40] mb-1 sm:mb-2">
                     {product.name}
                   </h4>
-                  <button className="mt-auto bg-[#8B297F] text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-[#722067] transition-colors text-xs sm:text-sm">
+                  <a
+                    href="#contact"
+                    className="mt-auto bg-[#8B297F] text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full hover:bg-[#722067] transition-colors text-xs sm:text-sm text-center"
+                  >
                     Enquire Now
-                  </button>
+                  </a>
+
                 </div>
               ))}
             </div>

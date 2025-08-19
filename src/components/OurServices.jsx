@@ -74,10 +74,13 @@ export default function OurServices() {
               <p className="text-sm sm:text-base text-gray-600 flex-grow">
                 {service.description}
               </p>
-
-              <button className="mt-4 bg-[#8B297F] hover:bg-[#722067] text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-colors text-xs sm:text-sm font-medium">
+              <a
+                href="#contact"
+                className="mt-4 inline-block bg-[#8B297F] hover:bg-[#722067] text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-colors text-xs sm:text-sm font-medium text-center"
+              >
                 Request Service
-              </button>
+              </a>
+
             </div>
           </div>
         ))}

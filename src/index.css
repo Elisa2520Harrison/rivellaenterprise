@@ -16,7 +16,7 @@
   opacity: 0; 
 }
 
-@keyframes float {
+/* @keyframes float {
   0%, 100% {
     transform: translateY(0);
   }
@@ -27,7 +27,7 @@
 
 .float-animation {
   animation: float 3s ease-in-out infinite;
-}
+} */
 
 @keyframes pulseGlow {
   0%, 100% {
@@ -46,3 +46,10 @@ html {
   scroll-behavior: smooth;
 }
 
+
+.dancing-script {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}

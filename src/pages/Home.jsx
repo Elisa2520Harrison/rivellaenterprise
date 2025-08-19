@@ -6,6 +6,7 @@ import Products from "../components/Products";
 import OurServices from "../components/OurServices";
 import PastEvents from "../components/PastEvents";
 import Footer from "../components/Footer";
+import Contact from "../components/Contact";
 
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
             <Products />
             <OurServices />
             <PastEvents />
+            <Contact />
             <Footer />
         </>
 
