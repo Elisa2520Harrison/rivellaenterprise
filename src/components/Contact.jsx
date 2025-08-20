@@ -9,7 +9,7 @@ export default function Contact() {
 
     useEffect(() => {
         if (state.succeeded) {
-            toast.success("✅ Message sent successfully!");
+            toast.success(" Message sent successfully!");
         }
     }, [state.succeeded]);
 
