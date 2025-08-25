@@ -6,12 +6,14 @@ import CoconutCocktailImage from "../assets/images/coconutcocktail.png";
 import MilletDrinkImage from "../assets/images/milletdrink.png";
 import FruitJuicesImage from "../assets/images/fruitjuices.png";
 import AgbeliKakloImage from "../assets/images/agbelikaklo.png";
-import ChinChinImage from "../assets/images/chinchin.jpg";
+// import ChinChinImage from "../assets/images/chinchin.jpg";
 import PlantainChipsImage from "../assets/images/plantainchips.png";
 import BoiledEggImage from "../assets/images/boiledegg.png";
 import GizzardImage from "../assets/images/gizzard.png";
 import GrilledChickenImage from "../assets/images/grilledchicken.png";
 import PepperedWeleImage from "../assets/images/pepperedwele.png";
+import Chinchin1Image from "../assets/images/chinchin1.jpg";
+import CocoRingsImage from "../assets/images/cocorings.jpg";
 
 export default function Products() {
   const productCategories = [
@@ -30,9 +32,11 @@ export default function Products() {
       title: "Delicious Snacks",
       products: [
         { name: "Agbeli Kaklo", image: AgbeliKakloImage },
-        { name: "Chin Chin", image: ChinChinImage },
+        // { name: "Chin Chin", image: ChinChinImage },
         { name: "Plantain Chips", image: PlantainChipsImage },
         { name: "Dzowoe", image: DzowoeImage },
+        { name: "Chinchin", image: Chinchin1Image},
+        { name: "CocoRings", image: CocoRingsImage}
       ],
     },
     {
