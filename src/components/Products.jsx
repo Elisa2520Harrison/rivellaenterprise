@@ -1,3 +1,6 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 import DzowoeImage from "../assets/images/dzowoe.jpg";
 import BisapImage from "../assets/images/bisap.png";
 import TamarindImage from "../assets/images/tamarind.png";
@@ -35,8 +38,8 @@ export default function Products() {
         // { name: "Chin Chin", image: ChinChinImage },
         { name: "Plantain Chips", image: PlantainChipsImage },
         { name: "Dzowoe", image: DzowoeImage },
-        { name: "Chinchin", image: Chinchin1Image},
-        { name: "CocoRings", image: CocoRingsImage}
+        { name: "Chinchin", image: Chinchin1Image },
+        { name: "CocoRings", image: CocoRingsImage },
       ],
     },
     {
@@ -74,11 +77,10 @@ export default function Products() {
                   key={idx}
                   className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow p-3 sm:p-4 flex flex-col"
                 >
-                  <img
-                    src={product.image}
+                  <LazyLoadImage
                     alt={product.name}
-                    loading="lazy"
-                    decoding="async"
+                    src={product.image}
+                    effect="blur"
                     width="400"
                     height="300"
                     className="w-full h-32 sm:h-40 object-cover rounded-md mb-3 sm:mb-4"
@@ -92,7 +94,6 @@ export default function Products() {
                   >
                     Enquire Now
                   </a>
-
                 </div>
               ))}
             </div>
